@@ -1,4 +1,55 @@
+@import "../../styles.scss";
+
 main {
   margin-top: 5rem;
-  background-color: pink;
+  background-color: $backgroundColor;
+}
+
+ul {
+  list-style-type: decimal;
+  font-size: 1.875rem;
+  color: $otherColor;
+  font-weight: bold;
+}
+
+li {
+  padding-bottom: 2.25rem;
+}
+
+h3 {
+  margin-right: 1.625rem;
+}
+
+img {
+  width: 2.643125rem;
+  height: auto;
+}
+
+.fonctionnement-site {
+  padding: 6.25rem 0;
+}
+
+.titre-principal {
+  padding-left: 1.5rem;
+}
+
+.rubrique-site {
+  padding-top: 8.1875rem;
+  padding-left: 11.25rem;
+}
+
+.icon {
+  display: flex;
+}
+
+.img-icon1 {
+  padding-left: 24.5rem;
+}
+
+.img-icon2 {
+  padding-left: 4rem;
+}
+
+.img-icon3 {
+  padding-left: 2.5rem;
 }
