@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Graphik';
+  src: url('./assets/Fonts/GraphikBold.woff');
+  src:url('./assets/Fonts/GraphikBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('./assets/Fonts/GraphikBoldItalic.woff');
+  src:url('./assets/Fonts/GraphikBoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./assets/Fonts/GraphikRegular.woff');
+    src:url('./assets/Fonts/GraphikRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Graphik';
+    src: url('./assets/Fonts/GraphikRegularItalic.woff');
+    src:url('./assets/Fonts/GraphikRegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Graphik';
+    src: url('./assets/Fonts/GraphikSemibold.woff');
+    src:url('./assets/Fonts/GraphikSemibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Graphik';
+    src: url('./assets/Fonts/GraphikSemiboldItalic.woff');
+    src:url('./assets/Fonts/GraphikSemiboldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  body {
+    font-family: 'Graphik', sans-serif;
+  }
