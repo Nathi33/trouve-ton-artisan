@@ -1,53 +1,89 @@
-<main class="fonctionnement-site">
-  <div class="titre-principal">
-    <div class="rectangle"></div>
-    <h1>Comment trouver mon artisan ?</h1>
-  </div>
-  <div class="rubrique-site">
-    <ul>
-      <li>
-        <div class="icon">
-          <h3>Choisir la catégorie d'artisanat dans le menu</h3>
-          <img
-            src="../../assets/pictures/picture-category.png"
-            alt="icône représentant un groupe de 3 personnes avec une roue dantée en bas à droite"
-          />
-        </div>
-      </li>
+<main>
+  <div class="site-operation">
+    <div class="main-title">
+      <div class="rectangle"></div>
+      <h1>Comment trouver mon artisan ?</h1>
+    </div>
+    <div class="site-section">
+      <ul>
+        <li>
+          <div class="icon">
+            <h3>Choisir la catégorie d'artisanat dans le menu</h3>
+            <img
+              src="../../assets/pictures/picture-category.png"
+              alt="icône représentant un groupe de 3 personnes avec une roue dantée en bas à droite"
+            />
+          </div>
+        </li>
 
-      <li>
-        <div class="icon">
-          <h3>Choisir un artisan</h3>
-          <div class="img-icon1">
-            <img
-              src="../../assets/pictures/picture-hammer.png"
-              alt="icône représentant un marteau"
-            />
+        <li>
+          <div class="icon">
+            <h3>Choisir un artisan</h3>
+            <div class="img-icon1">
+              <img
+                src="../../assets/pictures/picture-hammer.png"
+                alt="icône représentant un marteau"
+              />
+            </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="icon">
-          <h3>Le contacter via le formulaire de contact</h3>
-          <div class="img-icon2">
-            <img
-              src="../../assets/pictures/picture-form.png"
-              alt="icône de couleur rouge représentant un formulaire"
-            />
+        </li>
+        <li>
+          <div class="icon">
+            <h3>Le contacter via le formulaire de contact</h3>
+            <div class="img-icon2">
+              <img
+                src="../../assets/pictures/picture-form.png"
+                alt="icône de couleur rouge représentant un formulaire"
+              />
+            </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="icon">
-          <h3>Une réponse vous sera apportée sous 48h</h3>
-          <div class="img-icon3">
-            <img
-              src="../../assets/pictures/picture-valid.png"
-              alt="icône représentant un rond bleu avec un V blanc pour un check"
-            />
+        </li>
+        <li>
+          <div class="icon">
+            <h3>Une réponse vous sera apportée sous 48h</h3>
+            <div class="img-icon3">
+              <img
+                src="../../assets/pictures/picture-valid.png"
+                alt="icône représentant un rond bleu avec un V blanc pour un check"
+              />
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="top3">
+    <div class="title-craftsmen">
+      <div class="rectangle"></div>
+      <h2>Nos artisans du mois</h2>
+    </div>
+    <div class="craftsmen-card" *ngIf="data && data.length > 0">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <ng-container *ngFor="let artisan of data">
+          <div class="col" *ngIf="artisan.top">
+            <div class="card">
+              <div class="card-body">
+                <div class="stars">
+                  <i
+                    *ngFor="let star of getStars(artisan.note)"
+                    class="bi"
+                    [ngClass]="{
+                      'bi-star-fill': star === 'full',
+                      'bi-star-half': star === 'half',
+                      'bi-star': star === 'empty'
+                    }"
+                  ></i>
+                </div>
+                <div class="description-craftsman">
+                  <h3 class="card-name">{{ artisan.name }}</h3>
+                  <h4 class="card-h4">{{ artisan.specialty }}</h4>
+                  <h4 class="card-h4">{{ artisan.location }}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
   </div>
 </main>
