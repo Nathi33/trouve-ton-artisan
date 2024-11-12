@@ -6,7 +6,7 @@ import { DataCraftsmanService } from '../data-craftsman.service';
   templateUrl: './manufacturing.component.html',
   styleUrl: './manufacturing.component.scss',
 })
-export class ManufacturingComponent {
+export class ManufacturingComponent implements OnInit {
   data: any[] = [];
 
   constructor(private dataCraftsmanService: DataCraftsmanService) {}
