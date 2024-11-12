@@ -120,3 +120,29 @@ h5 {
   background-color: rgba(205, 44, 46, 0.75);
   margin-bottom: 2.5625rem;
 }
+
+.craftsmen-card {
+  padding-top: 8.75rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.card {
+  width: 22.8125rem;
+  height: 15.625rem;
+  background-color: rgba(0, 73, 124, 0.1);
+}
+
+.stars {
+  padding-bottom: 2rem;
+}
+
+.card-h4 {
+  margin-top: 1.5625rem;
+}
+
+.card:hover {
+  background-color: rgba(130, 184, 100, 0.75);
+  width: 25rem;
+  height: 18.75rem;
+}

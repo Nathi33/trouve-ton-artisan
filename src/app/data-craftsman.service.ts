@@ -1,6 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+export interface Artisans {
+  id: string;
+  name: string;
+  category: string;
+  specialty: string;
+  location: string;
+  note: number;
+  top: boolean;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +24,18 @@ export class DataCraftsmanService {
   constructor(private http: HttpClient) {}
 
   // Méthode permettant de récupérer les données du fichier JSON
-  getData(): Observable<any> {
-    return this.http.get<any>(this.dataUrl);
+  getData(): Observable<Artisans[]> {
+    return this.http.get<Artisans[]>(this.dataUrl);
+  }
+
+  //Filtre les artisans par catégorie
+  getByCategory(category: string): Observable<Artisans[]> {
+    return this.http
+      .get<Artisans[]>(this.dataUrl)
+      .pipe(
+        map((response) =>
+          response.filter((artisan: Artisans) => artisan.category === category)
+        )
+      );
   }
 }

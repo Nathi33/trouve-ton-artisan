@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { StarRatingPipe } from './star-rating.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     CookiesComponent,
     HeaderComponent,
     FooterComponent,
+    StarRatingPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
