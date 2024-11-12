@@ -1,5 +1,5 @@
 <main>
-  <div class="site-operation">
+  <section class="site-operation">
     <div class="main-title">
       <div class="rectangle"></div>
       <h1>Comment trouver mon artisan ?</h1>
@@ -51,8 +51,8 @@
         </li>
       </ul>
     </div>
-  </div>
-  <div class="top3">
+  </section>
+  <section class="top3">
     <div class="title-craftsmen">
       <div class="rectangle"></div>
       <h2>Nos artisans du mois</h2>
@@ -65,7 +65,7 @@
               <div class="card-body">
                 <div class="stars">
                   <i
-                    *ngFor="let star of getStars(artisan.note)"
+                    *ngFor="let star of artisan.note | starRating"
                     class="bi"
                     [ngClass]="{
                       'bi-star-fill': star === 'full',
@@ -85,5 +85,5 @@
         </ng-container>
       </div>
     </div>
-  </div>
+  </section>
 </main>
